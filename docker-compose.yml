@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+
+  app:
+    # node:20.11.1
+    container_name: discbot-app
+    build: 
+    # buildはとりあえずcontextとdockerfileを埋めとけ
+    # 引用元:https://qiita.com/sam8helloworld/items/e7fffa9afc82aea68a7a
+      context: .
+      dockerfile: ./src/Dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+    # ホストパス:コンテナパスの形式でマウント設定a
+    volumes:
+      - ./src:/discbot
+  
+#   db:
+#     image: mysql:5.7
+#     container_name: discbot-db
+#     environment:
+#       MYSQL_ROOT_PASSWORD: password
+#       MYSQL_DATABASE: nodedb
+#     volumes:
+#       - dbdata:/var/lib/mysql
+
+# volumes:
+#   dbdata:

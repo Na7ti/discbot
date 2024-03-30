@@ -1,0 +1,19 @@
+{
+  "name": "discbot",
+  "version": "1.0.0",
+  "description": "ただの気まぐれなポートフォリオです。",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon -L ./app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
